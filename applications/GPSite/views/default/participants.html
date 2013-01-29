@@ -1,0 +1,13 @@
+{{extend 'layout.html'}}
+
+{{ for entry in entries: }}
+<div class="partyzan">
+    <h3>{{=entry.hashTag}}</h3>
+    <p>{{=entry.teamDescription}}</p>
+    <h3>authors:</h3>
+    {{for author in entry.authors:}}
+        <a target="_blank" href="https://twitter.com/{{=author}}">{{=author}}</a>
+    {{pass}}
+</div>
+
+{{pass}}
